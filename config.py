@@ -1,6 +1,7 @@
 from tkinter.filedialog import asksaveasfilename, askopenfilename
 from tkinter.messagebox import *
 from tkinter import  END, Text
+global default_font_size
 default_font_size = 12
 default_font_family = "Consolas"
 
@@ -20,3 +21,5 @@ def add_font_size(textbox: Text()):
 def minus_font_size(textbox: Text()):
     default_font_size = default_font_size - 2
     textbox.config(font=(default_font_family, default_font_size))
+
+ 
