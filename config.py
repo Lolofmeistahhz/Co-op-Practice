@@ -14,4 +14,9 @@ def save_file(textbox: Text):
     path = asksaveasfilename(filetypes=[('ALL Files', '*')])
     with open(path, "w") as file:
         file.write(textbox.get("1.0", END))
-        
+def add_font_size(textbox: Text()):
+    default_font_size = default_font_size + 2
+    textbox.config(font=(default_font_family, default_font_size))
+def minus_font_size(textbox: Text()):
+    default_font_size = default_font_size - 2
+    textbox.config(font=(default_font_family, default_font_size))
