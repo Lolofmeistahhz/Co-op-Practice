@@ -22,5 +22,7 @@ def minus_font_size(textbox):
     global default_font_size
     default_font_size = default_font_size - 2
     textbox.config(font=(default_font_family, default_font_size))
+def dark_mode(textbox):
+    textbox.configure(bg="#000000",fg="#FF6600")
 
  
