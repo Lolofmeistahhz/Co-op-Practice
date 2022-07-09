@@ -7,7 +7,7 @@ if __name__ == "__main__":
     textbox = Text(yscrollcommand=True, font=('Consolas',12))
     textbox.pack(expand=True, fill="both")
     menu = Menu(window)
-    textbox.configure(font=())
+    # textbox.configure(font=())
 
     file_menu = Menu(menu, tearoff=False)
     file_menu.add_command(label='Открыть файл...', command=lambda: config.open_file(textbox))
