@@ -1,6 +1,6 @@
 from tkinter.filedialog import asksaveasfilename, askopenfilename
 from tkinter.messagebox import *
-from tkinter import  END, Text
+from tkinter import  END
 default_font_size = 12
 default_font_family = "Consolas"
 
