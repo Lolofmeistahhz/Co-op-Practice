@@ -1,6 +1,6 @@
 from tkinter import Tk, Text, Menu
 
-from config import open_file, save_file, add_font_size, minus_font_size
+from config import dark_mode, light_mode, open_file, save_file, add_font_size, minus_font_size
 window = Tk()
 
 if __name__ == "__main__":
@@ -17,14 +17,15 @@ if __name__ == "__main__":
     looks_menu = Menu(menu, tearoff=False)
     looks_menu.add_command(label="Увеличить шрифт", command=lambda: add_font_size(textbox))
     looks_menu.add_command(label="Уменьшить шрифт", command=lambda: minus_font_size(textbox))
-    looks_menu.add_command(label="Сменить тему...", command=lambda: print("test only"))
+    looks_menu.add_command(label="Темная тема", command=lambda: dark_mode(textbox))
+    looks_menu.add_command(label="Светлая тема", command=lambda: light_mode(textbox))
     menu.add_cascade(label="Файл", menu=file_menu)
     menu.add_cascade(label="Внешний вид", menu=looks_menu)
     # сочетания клавиш
     window.bind_all("<Control-Key-s>", lambda e: save_file(textbox))
     window.bind_all("<Control-Key-o>", lambda e: open_file(textbox))
-    window.bind_all("<Control-Key-+>", lambda e: add_font_size(textbox))
-    window.bind_all("<Control-Key-->", lambda e: minus_font_size(textbox))
+    window.bind_all("<Control-Key-9>", lambda e: add_font_size(textbox))
+    window.bind_all("<Control-Key-0>", lambda e: minus_font_size(textbox))
 
     window.config(menu=menu)
     window.mainloop()
