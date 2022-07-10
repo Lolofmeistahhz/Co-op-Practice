@@ -14,15 +14,25 @@ def save_file(textbox):
     path = asksaveasfilename(filetypes=[('ALL Files', '*')])
     with open(path, "w") as file:
         file.write(textbox.get("1.0", END))
+
 def add_font_size(textbox):
     global default_font_size
-    default_font_size = default_font_size + 2
-    textbox.config(font=(default_font_family, default_font_size))
+    if default_font_size > 36:
+        default_font_size = default_font_size
+    else:
+        default_font_size = default_font_size + 2
+        textbox.config(font=(default_font_family, default_font_size))
 def minus_font_size(textbox):
     global default_font_size
-    default_font_size = default_font_size - 2
-    textbox.config(font=(default_font_family, default_font_size))
+    if default_font_size < 8:
+        default_font_size = default_font_size
+    else:
+        default_font_size = default_font_size - 2
+        textbox.config(font=(default_font_family, default_font_size))
+
 def dark_mode(textbox):
     textbox.configure(bg="#000000",fg="#FF6600")
+def light_mode(textbox):
+    textbox.configure(bg="#ffffff",fg="#000000")
 
  
