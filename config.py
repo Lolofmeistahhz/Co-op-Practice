@@ -33,6 +33,14 @@ def minus_font_size(textbox):
     else:
         default_font_size = default_font_size - 2
         textbox.config(font=(default_font_family, default_font_size))
+<<<<<<< HEAD
+=======
+
+def dark_mode(textbox):
+    textbox.configure(bg="#000000",fg="#FF6600")
+def light_mode(textbox):
+    textbox.configure(bg="#ffffff",fg="#000000")
+>>>>>>> 05aa0ed1a390371cf11f5b5cb1eb73fe347d1b37
 
 def dark_mode(textbox: Text):
     textbox.configure(bg="#000000",fg="#FF6600", insertbackground="white")
